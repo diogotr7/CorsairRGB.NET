@@ -36,18 +36,18 @@ namespace CorsairRGB.NET
             var _devInfo = (_CorsairDeviceInfo)Marshal.PtrToStructure(Native.CorsairGetDeviceInfo(index), typeof(_CorsairDeviceInfo));
             var _channelsInfo = _devInfo.channels;
             var _channelsArray = GetArrayFromPointer<_CorsairChannelInfo>(_channelsInfo.channels, _channelsInfo.channelsCount);
-            var _channelInfoDict = new Dictionary<_CorsairChannelInfo, CorsairChannelDeviceInfo[]>();
+            var _channelInfoDict = new List<(_CorsairChannelInfo channelInfo, CorsairChannelDeviceInfo[] deviceInfos)>();
             foreach (var _channel in _channelsArray)
             {
                 var devices = GetArrayFromPointer<CorsairChannelDeviceInfo>(_channel.devices, _channel.devicesCount);
-                _channelInfoDict.Add(_channel, devices);
+                _channelInfoDict.Add((_channel, devices));
             }
 
             var channelsList = new List<CorsairChannelInfo>();
             foreach(var kvp in _channelInfoDict)
             {
                 var y = new List<CorsairChannelDeviceInfo>();
-                foreach(var devinfo in kvp.Value)
+                foreach(var devinfo in kvp.deviceInfos)
                 {
                     y.Add(new CorsairChannelDeviceInfo()
                     {
@@ -57,8 +57,8 @@ namespace CorsairRGB.NET
                 }
                 channelsList.Add(new CorsairChannelInfo()
                 {
-                    DevicesCount = kvp.Key.devicesCount,
-                    TotalLedsCount = kvp.Key.totalLedsCount,
+                    DevicesCount = kvp.channelInfo.devicesCount,
+                    TotalLedsCount = kvp.channelInfo.totalLedsCount,
                     Devices = y.ToArray()
                 });
             }
