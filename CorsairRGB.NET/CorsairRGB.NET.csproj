@@ -10,11 +10,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <DocumentationFile>C:\Users\Diogo\source\repos\CorsairRGB.NET\CorsairRGB.NET\CorsairRGB.NET.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <DocumentationFile>C:\Users\Diogo\source\repos\CorsairRGB.NET\CorsairRGB.NET\CorsairRGB.NET.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

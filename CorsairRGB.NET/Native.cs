@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CorsairRGB.NET.Enums;
+using CorsairRGB.NET.Structures;
+using System;
 using System.Runtime.InteropServices;
 
 namespace CorsairRGB.NET
