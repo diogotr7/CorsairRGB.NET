@@ -72,10 +72,10 @@ namespace CorsairRGB.NET
             {
                 CapsMask = (CorsairDeviceCaps)_devInfo.capsMask,
                 LedsCount = _devInfo.ledsCount,
-                LogicalLayout = _devInfo.logicalLayout,
-                PhysicalLayout = _devInfo.physicalLayout,
+                LogicalLayout = (CorsairLogicalLayout)_devInfo.logicalLayout,
+                PhysicalLayout = (CorsairPhysicalLayout)_devInfo.physicalLayout,
                 Model = Marshal.PtrToStringAnsi(_devInfo.model),
-                Type = _devInfo.type,
+                Type = (CorsairDeviceType)_devInfo.type,
                 Channels = channelsInfo
             };
         }

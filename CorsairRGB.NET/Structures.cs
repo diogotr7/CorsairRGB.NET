@@ -1185,10 +1185,10 @@ namespace CorsairRGB.NET
     [StructLayout(LayoutKind.Sequential)]
     internal struct _CorsairDeviceInfo
     {
-        internal CorsairDeviceType type;
+        internal int type;
         internal IntPtr model;
-        internal CorsairPhysicalLayout physicalLayout;
-        internal CorsairLogicalLayout logicalLayout;
+        internal int physicalLayout;
+        internal int logicalLayout;
         internal int capsMask;
         internal int ledsCount;
         internal _CorsairChannelsInfo channels;
