@@ -14,6 +14,8 @@
         CommanderPro = 6,
         LightingNodePro = 7,
         MemoryModule = 8,
-        Cooler = 9
+        Cooler = 9,
+        Motherboard = 10,
+        GraphicsCard = 11
     };
 }
