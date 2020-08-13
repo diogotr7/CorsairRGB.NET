@@ -58,5 +58,10 @@
       <Name>CorsairRGB.NET</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CUESDK.x64_2017.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
