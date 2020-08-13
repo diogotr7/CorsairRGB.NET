@@ -1567,6 +1567,6 @@
 
 		K_Profile = 1543,
 
-		I_Last = CLK_Profile
+		I_Last = K_Profile
 	};
 }
