@@ -7,6 +7,7 @@
     <Authors>diogotr7</Authors>
     <Copyright>MIT</Copyright>
     <Description>Simple wrapper around the rgb functions of the CUE SDK</Description>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>
