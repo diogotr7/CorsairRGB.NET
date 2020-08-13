@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CorsairRGB.NET.Enums
+﻿namespace CorsairRGB.NET.Enums
 {
     /// <summary>
     /// Contains list of the LED-devices which can be connected to the DIY-device.

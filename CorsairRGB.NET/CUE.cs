@@ -3,7 +3,6 @@ using CorsairRGB.NET.Structures;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace CorsairRGB.NET
 {
@@ -46,10 +45,10 @@ namespace CorsairRGB.NET
             }
 
             var channelsList = new List<CorsairChannelInfo>();
-            foreach(var kvp in _channelInfoDict)
+            foreach (var kvp in _channelInfoDict)
             {
                 var y = new List<CorsairChannelDeviceInfo>();
-                foreach(var devinfo in kvp.deviceInfos)
+                foreach (var devinfo in kvp.deviceInfos)
                 {
                     y.Add(new CorsairChannelDeviceInfo()
                     {
